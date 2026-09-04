@@ -9,4 +9,7 @@
     (let((n (read))) n)
 )
 
-(checker (take_in))
+(defun even_odd_checker (n)
+    (if (= (mod n 2) 0) (progn (format t "divide~%") (/ n 2)) (progn (format t "multiply~%") (+ (* 3 n) 1))))
+
+(princ (even_odd_checker (take_in)))
